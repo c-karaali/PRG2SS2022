@@ -1,20 +1,14 @@
 package SingletonPattern;
-public class PrinterQueue {
 
-    private static Singleton INSTANCE = null;
+public class PrinterQueue{
 
-    private Singleton() {}
+    private static PrinterQueue printerQueue = null;
+    private PrinterQueue() {}
 
-    private static Singleton getInstance() {
-        if (INSTANCE == null) {
-            INSTANCE = new PrinterQueue();
+    public static PrinterQueue getInstance() {
+        if (printerQueue == null) {
+            printerQueue = new PrinterQueue();
         }
-
-        return INSTANCE;
-
-    }
-
-    private static String print(String) {
-        System.out.println("Printing job: " + )
+        return printerQueue;
     }
 }
