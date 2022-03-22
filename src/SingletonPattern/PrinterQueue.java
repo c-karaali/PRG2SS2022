@@ -2,13 +2,15 @@ package SingletonPattern;
 
 public class PrinterQueue{
 
-    private static PrinterQueue printerQueue = null;
+    private static PrinterQueue INSTANCE = null;
     private PrinterQueue() {}
 
     public static PrinterQueue getInstance() {
-        if (printerQueue == null) {
-            printerQueue = new PrinterQueue();
+        if (INSTANCE == null) {
+            INSTANCE = new PrinterQueue();
         }
-        return printerQueue;
+        return INSTANCE;
+
     }
+
 }
